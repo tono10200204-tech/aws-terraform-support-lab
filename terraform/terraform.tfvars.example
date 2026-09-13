@@ -1,0 +1,4 @@
+# terraform.tfvars にコピーして、自分のグローバルIPに書き換える。
+#   cp terraform.tfvars.example terraform.tfvars
+#   curl -s https://checkip.amazonaws.com
+my_ip = "203.0.113.10/32"
