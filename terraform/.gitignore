@@ -1,3 +1,8 @@
+#Terraform
 .terraform/
 *.tfstate
 *.tfstate.*
+tfplan
+
+# 実値を含む変数ファイル（.example は追跡する）
+*.tfvars
