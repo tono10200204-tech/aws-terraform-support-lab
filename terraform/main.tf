@@ -46,14 +46,8 @@ resource "aws_security_group" "ssh" {
   name        = "support-lab-ssh"
   description = "Allow SSH access for support Lab"
   vpc_id      = aws_vpc.main.id
+  ingress     = []
 
-  ingress {
-    description = "SSH from my IP"
-    from_port   = 22
-    to_port     = 22
-    protocol    = "tcp"
-    cidr_blocks = [var.my_ip]
-  }
   # This matches the default outbound behavior of a new Security Group.
   egress {
     description = "Allow all outbound traffic"
